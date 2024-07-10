@@ -123,23 +123,23 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
     win.fill(BG_COLOR)
     
     time_label = LABEL_FONT.render(
-        f"Time: {format_time(elapsed_time)}",1 , "black"
+        f"Time: {format_time(elapsed_time)}",1 , "white"
     )
     
     hits_label = LABEL_FONT.render(
-        f"Hits: {targets_pressed}", 1, "black"
+        f"Hits: {targets_pressed}", 1, "white"
     )
     
     speed = round(targets_pressed / elapsed_time, 1)
     speed_label = LABEL_FONT.render(
-        f"Speed: {speed} t/s", 1, "black"
+        f"Speed: {speed} t/s", 1, "white"
     )
     
     if clicks == 0:
         accuracy = 0
     else: accuracy = round(targets_pressed / clicks * 100 , 1) 
     accuracy_label = LABEL_FONT.render(
-        f"Accuracy: {accuracy}%", 1, "black"
+        f"Accuracy: {accuracy}%", 1, "white"
     )
     
     
