@@ -146,15 +146,12 @@ def end_screen(win, elapsed_time, targets_pressed, misses, clicks):
     accuracy_label = LABEL_FONT.render(
         f"Accuracy: {accuracy}%", 1, "white"
     )
-    
-    
-    
+
     win.blit(time_label, (get_middle(time_label), 50))    
     win.blit(speed_label, (get_middle(speed_label), 150))
     win.blit(hits_label, (get_middle(hits_label), 250))
     win.blit(misses_label, (get_middle(misses_label), 350))
     win.blit(accuracy_label, (get_middle(accuracy_label), 450))
-    
     
     pygame.display.update()
     
@@ -219,8 +216,8 @@ def main():
 
         # Check if misses are greater than or equal to 3
         if misses >= 3:
-            lives -= 1  # Deduct a life
-            misses = 0  # Reset misses
+            lives -= misses // 3  # Deduct a life
+            #misses = 0  # Reset misses
 
         # End game if lives == 0
         if lives <= 0:
