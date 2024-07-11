@@ -17,9 +17,6 @@ Run the game:
 python -m src.main
 
 aim_trainer/
-├── assets/
-│   ├── images/
-│   └── sounds/
 ├── src/
 │   ├── __init__.py
 │   ├── main.py
